@@ -10,8 +10,7 @@ class HomeController extends Controller
     public function index() {
 
         $cars = Car::all();
-        dd($cars);
 
-        return view('home');
+        return view('home' , compact('cars'));
     }
 }

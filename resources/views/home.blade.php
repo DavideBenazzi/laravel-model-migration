@@ -2,7 +2,15 @@
 
 @section('content')
     <h1>CARS</h1>
-    <h2>Marca</h2>
-    <h2>Modello</h2>
-    <h2>Targa</h2>
+    <div>
+        <ul>
+            @foreach ($cars as $car)
+            <li>
+                <h3>Marca: {{ $car->marca }}</h3>  
+                <h3>Modello: {{ $car->modello }}</h3>  
+                <h3>Targa: {{ $car->targa }}</h3>                    
+            </li>    
+            @endforeach
+        </ul>
+    </div>
 @endsection
