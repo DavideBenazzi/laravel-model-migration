@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBykesTable extends Migration
+class CreateBikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateBykesTable extends Migration
      */
     public function up()
     {
-        Schema::create('bykes', function (Blueprint $table) {
+        Schema::create('bikes', function (Blueprint $table) {
             $table->id();
             $table->string('modello' , 50);
             $table->string('marca' , 30);
@@ -29,6 +29,6 @@ class CreateBykesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bykes');
+        Schema::dropIfExists('bikes');
     }
 }
